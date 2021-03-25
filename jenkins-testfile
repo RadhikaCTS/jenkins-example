@@ -10,11 +10,11 @@ pipeline {
                 }
             }
         }
-    stage ('Compile Stage') {
+        stage ('Compile Stage') {
 
-        steps {
-            withMaven(maven : 'LocalMaven') {
-                sh 'mvn clean compile'
+            steps {
+                withMaven(maven : 'LocalMaven') {
+                    sh 'mvn clean compile'
             }
         }
      }
